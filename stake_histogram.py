@@ -91,7 +91,7 @@ for i, env in enumerate(env_names):
             label,
             ha="center",
             va="center",
-            fontsize=9,
+            fontsize=8.5,
             fontweight="bold",
             color="black",
             clip_on=True,
@@ -107,16 +107,16 @@ for i, env in enumerate(env_names):
         f"{total:.1f}%",
         ha="center",
         va="bottom",
-        fontsize=12,
+        fontsize=11.5,
         fontweight="bold",
         color="#333333",
     )
 
 ax.set_xticks(x_positions)
-ax.set_xticklabels(env_names, fontsize=12, fontweight="bold")
+ax.set_xticklabels(env_names, fontsize=11.5, fontweight="bold")
 ax.set_ylabel("")
-ax.set_title("Distribution of Environment Types", fontsize=18, fontweight="bold", pad=15)
-ax.tick_params(axis="y", labelsize=11)
+ax.set_title("Distribution of Environment Types", fontsize=17.5, fontweight="bold", pad=15)
+ax.tick_params(axis="y", labelsize=10.5)
 ax.yaxis.set_major_formatter(mticker.PercentFormatter())
 ax.set_ylim(0, 45)
 ax.spines["top"].set_visible(False)

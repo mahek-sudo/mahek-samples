@@ -107,13 +107,13 @@ for i, r in enumerate(rects_coords):
     area = r["dx"] * r["dy"]
 
     if area > 15:
-        fontsize = 9
+        fontsize = 8.5
     elif area > 8:
-        fontsize = 7.5
+        fontsize = 7
     elif area > 4:
-        fontsize = 6
+        fontsize = 5.5
     else:
-        fontsize = 5
+        fontsize = 4.5
 
     # Use white text on darker blues, black on lighter
     shade_val = blue_centers.get(env_labels[i], 0.5)
@@ -135,7 +135,7 @@ for i, r in enumerate(rects_coords):
         ax.text(
             x, y, env_labels[i],
             ha="center", va="bottom",
-            fontsize=5, fontstyle="italic",
+            fontsize=4.5, fontstyle="italic",
             color="white", alpha=0.7,
         )
 
@@ -150,12 +150,12 @@ legend_patches = [
 ]
 ax.legend(
     handles=legend_patches, loc="upper left", bbox_to_anchor=(1.01, 1),
-    fontsize=9, frameon=False, title="Environment", title_fontsize=10,
+    fontsize=8.5, frameon=False, title="Environment", title_fontsize=9.5,
 )
 
 ax.set_title(
     "Stake Distribution by Environment — Treemap",
-    fontsize=16, fontweight="bold", pad=15,
+    fontsize=15.5, fontweight="bold", pad=15,
 )
 ax.axis("off")
 
