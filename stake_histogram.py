@@ -25,14 +25,14 @@ data = {
         ("Other", 3.7),
     ],
     "factory": [
-        ("Assembly", 2.7),
+        ("Assembly line", 2.7),
         ("Packaging", 2.2),
-        ("Mach. shop", 1.8),
+        ("Machine shop", 1.8),
         ("Other", 2.4),
     ],
     "outdoor_urban": [
-        ("St. infra", 2.9),
-        ("Constr. site", 2.6),
+        ("Street Infra", 2.9),
+        ("Construction Site", 2.6),
         ("Other", 1.8),
     ],
     "vehicle": [
@@ -82,29 +82,19 @@ for i, env in enumerate(env_names):
             linewidth=0.5,
         )
 
-        # Add label inside the bar segment, scaling font to fit
+        # Add label inside the bar segment
         mid_y = bottom + pct / 2
-        display_name = sub_name
-
-        if pct >= 4.0:
-            label = f"{display_name}\n{pct}%"
-            fontsize = 7
-        elif pct >= 2.5:
-            label = f"{display_name}\n{pct}%"
-            fontsize = 5.5
-        elif pct >= 1.5:
-            label = f"{display_name} {pct}%"
-            fontsize = 5
+        if pct >= 2.5:
+            label = f"{sub_name}\n{pct}%"
         else:
-            label = f"{display_name} {pct}%"
-            fontsize = 4
+            label = f"{sub_name} {pct}%"
         ax.text(
             x_positions[i],
             mid_y,
             label,
             ha="center",
             va="center",
-            fontsize=fontsize,
+            fontsize=6,
             fontweight="bold",
             color="black",
             clip_on=True,
