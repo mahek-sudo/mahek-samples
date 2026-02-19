@@ -15,7 +15,7 @@ data = {
         ("lift", 6.5),
         ("place", 6.0),
         ("move", 5.5),
-        ("slide", 4.0),
+        ("other", 4.0),
     ],
     "Tool Use": [
         ("press", 3.5),
@@ -35,12 +35,13 @@ data = {
         ("pour", 2.5),
         ("scoop", 2.0),
         ("dump", 1.5),
-        ("spread", 1.0),
+        ("other", 1.0),
     ],
     "Bimanual": [
         ("two_hand_hold", 2.5),
         ("anchor_and_act", 2.0),
         ("two_hand_align", 1.5),
+        ("other", 0.5),
     ],
     "Deform": [
         ("fold", 1.5),
