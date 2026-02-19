@@ -61,7 +61,7 @@ color_palettes = {
 
 fig, ax = plt.subplots(figsize=(14, 8))
 
-bar_width = 0.6
+bar_width = 0.75
 x_positions = np.arange(len(data))
 env_names = list(data.keys())
 
