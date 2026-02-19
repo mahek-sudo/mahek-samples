@@ -91,7 +91,7 @@ for i, env in enumerate(env_names):
             label,
             ha="center",
             va="center",
-            fontsize=6,
+            fontsize=9,
             fontweight="bold",
             color="black",
             clip_on=True,
@@ -107,15 +107,16 @@ for i, env in enumerate(env_names):
         f"{total:.1f}%",
         ha="center",
         va="bottom",
-        fontsize=9,
+        fontsize=12,
         fontweight="bold",
         color="#333333",
     )
 
 ax.set_xticks(x_positions)
-ax.set_xticklabels(env_names, fontsize=10, fontweight="bold")
-ax.set_ylabel("Percentage (%)", fontsize=12)
-ax.set_title("Stake Distribution by Environment", fontsize=16, fontweight="bold", pad=15)
+ax.set_xticklabels(env_names, fontsize=12, fontweight="bold")
+ax.set_ylabel("Percentage (%)", fontsize=14)
+ax.set_title("Stake Distribution by Environment", fontsize=18, fontweight="bold", pad=15)
+ax.tick_params(axis="y", labelsize=11)
 ax.yaxis.set_major_formatter(mticker.PercentFormatter())
 ax.set_ylim(0, 45)
 ax.spines["top"].set_visible(False)
