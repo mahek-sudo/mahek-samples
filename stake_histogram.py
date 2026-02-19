@@ -115,7 +115,7 @@ for i, env in enumerate(env_names):
 ax.set_xticks(x_positions)
 ax.set_xticklabels(env_names, fontsize=12, fontweight="bold")
 ax.set_ylabel("Percentage (%)", fontsize=14)
-ax.set_title("Stake Distribution by Environment", fontsize=18, fontweight="bold", pad=15)
+ax.set_title("Distribution of Environment Types", fontsize=18, fontweight="bold", pad=15)
 ax.tick_params(axis="y", labelsize=11)
 ax.yaxis.set_major_formatter(mticker.PercentFormatter())
 ax.set_ylim(0, 45)
