@@ -6,7 +6,7 @@ import numpy as np
 data = {
     "indoor_home": [
         ("Kitchen", 11.2),
-        ("Living room", 10.0),
+        ("Living Room", 10.0),
         ("Bedroom", 8.0),
         ("Garage", 4.8),
         ("Other", 6.0),
@@ -25,9 +25,9 @@ data = {
         ("Other", 3.7),
     ],
     "factory": [
-        ("Assembly line", 2.7),
+        ("Assembly Line", 2.7),
         ("Packaging", 2.2),
-        ("Machine shop", 1.8),
+        ("Machine Shop", 1.8),
         ("Other", 2.4),
     ],
     "outdoor_urban": [
@@ -36,7 +36,7 @@ data = {
         ("Other", 1.8),
     ],
     "vehicle": [
-        ("Car cabin", 2.4),
+        ("Car Cabin", 2.4),
         ("Other", 1.3),
     ],
     "other": [
