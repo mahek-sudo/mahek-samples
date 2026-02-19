@@ -84,10 +84,7 @@ for i, env in enumerate(env_names):
 
         # Add label inside the bar segment
         mid_y = bottom + pct / 2
-        if pct >= 2.5:
-            label = f"{sub_name}\n{pct}%"
-        else:
-            label = f"{sub_name} {pct}%"
+        label = f"{sub_name} {pct}%"
         ax.text(
             x_positions[i],
             mid_y,
