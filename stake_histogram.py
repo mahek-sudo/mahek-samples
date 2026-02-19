@@ -82,29 +82,30 @@ for i, env in enumerate(env_names):
             linewidth=0.5,
         )
 
-        # Add label inside the bar segment if tall enough
+        # Add label inside the bar segment, scaling font to fit
         mid_y = bottom + pct / 2
-        if pct >= 1.5:
-            ax.text(
-                x_positions[i],
-                mid_y,
-                f"{sub_name}\n{pct}%",
-                ha="center",
-                va="center",
-                fontsize=7,
-                fontweight="bold",
-                color="white" if pct >= 3.0 else "black",
-            )
-        elif pct >= 0.8:
-            ax.text(
-                x_positions[i],
-                mid_y,
-                f"{sub_name} {pct}%",
-                ha="center",
-                va="center",
-                fontsize=5.5,
-                color="black",
-            )
+        if pct >= 3.0:
+            label = f"{sub_name}\n{pct}%"
+            fontsize = 7
+        elif pct >= 1.8:
+            label = f"{sub_name}\n{pct}%"
+            fontsize = 6
+        elif pct >= 1.2:
+            label = f"{sub_name} {pct}%"
+            fontsize = 5.5
+        else:
+            label = f"{sub_name} {pct}%"
+            fontsize = 4.5
+        ax.text(
+            x_positions[i],
+            mid_y,
+            label,
+            ha="center",
+            va="center",
+            fontsize=fontsize,
+            fontweight="bold",
+            color="black",
+        )
 
         bottom += pct
 
