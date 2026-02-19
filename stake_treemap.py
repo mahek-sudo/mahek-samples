@@ -5,42 +5,42 @@ import squarify
 
 # Data organized by environment
 data = {
-    "indoor_home": [
+    "Indoor Home": [
         ("Kitchen", 11.2),
         ("Living room", 10.0),
         ("Bedroom", 8.0),
         ("Garage", 4.8),
         ("Other", 6.0),
     ],
-    "indoor_public": [
+    "Indoor Public": [
         ("Retail", 5.9),
         ("Office", 5.9),
         ("Warehouse", 4.4),
         ("Restaurant", 3.9),
         ("Other", 4.5),
     ],
-    "outdoor_nature": [
+    "Outdoor Nature": [
         ("Garden", 4.1),
         ("Farm", 3.4),
         ("Trail", 2.4),
         ("Other", 3.7),
     ],
-    "factory": [
+    "Factory": [
         ("Assembly line", 2.7),
         ("Packaging", 2.2),
         ("Machine shop", 1.8),
         ("Other", 2.4),
     ],
-    "outdoor_urban": [
+    "Outdoor Urban": [
         ("Street infra", 2.9),
         ("Construction site", 2.6),
         ("Other", 1.8),
     ],
-    "vehicle": [
+    "Vehicle": [
         ("Car cabin", 2.4),
         ("Other", 1.3),
     ],
-    "other": [
+    "Other": [
         ("\u2014", 1.8),
     ],
 }
@@ -51,13 +51,13 @@ env_totals = {env: sum(p for _, p in subs) for env, subs in data.items()}
 
 # Blue shade centers for each environment (spread across the blue spectrum)
 blue_centers = {
-    "indoor_home": 0.75,
-    "indoor_public": 0.60,
-    "outdoor_nature": 0.50,
-    "factory": 0.42,
-    "outdoor_urban": 0.35,
-    "vehicle": 0.28,
-    "other": 0.20,
+    "Indoor Home": 0.75,
+    "Indoor Public": 0.60,
+    "Outdoor Nature": 0.50,
+    "Factory": 0.42,
+    "Outdoor Urban": 0.35,
+    "Vehicle": 0.28,
+    "Other": 0.20,
 }
 
 # Build flat lists for treemap

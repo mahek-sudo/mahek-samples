@@ -4,55 +4,55 @@ import numpy as np
 
 # Data organized by environment
 data = {
-    "indoor_home": [
+    "Indoor Home": [
         ("Kitchen", 11.2),
         ("Living Room", 10.0),
         ("Bedroom", 8.0),
         ("Garage", 4.8),
         ("Other", 6.0),
     ],
-    "indoor_public": [
+    "Indoor Public": [
         ("Retail", 5.9),
         ("Office", 5.9),
         ("Warehouse", 4.4),
         ("Restaurant", 3.9),
         ("Other", 4.5),
     ],
-    "outdoor_nature": [
+    "Outdoor Nature": [
         ("Garden", 4.1),
         ("Farm", 3.4),
         ("Trail", 2.4),
         ("Other", 3.7),
     ],
-    "factory": [
+    "Factory": [
         ("Assembly Line", 2.7),
         ("Packaging", 2.2),
         ("Machine Shop", 1.8),
         ("Other", 2.4),
     ],
-    "outdoor_urban": [
+    "Outdoor Urban": [
         ("Street Infra", 2.9),
         ("Construction", 2.6),
         ("Other", 1.8),
     ],
-    "vehicle": [
+    "Vehicle": [
         ("Car Cabin", 2.4),
         ("Other", 1.3),
     ],
-    "other": [
+    "Other": [
         ("Other", 1.8),
     ],
 }
 
 # Color palettes for each environment (different shades of blue)
 blue_ranges = {
-    "indoor_home": (0.25, 0.75),
-    "indoor_public": (0.30, 0.70),
-    "outdoor_nature": (0.35, 0.75),
-    "factory": (0.30, 0.70),
-    "outdoor_urban": (0.35, 0.75),
-    "vehicle": (0.40, 0.70),
-    "other": (0.45, 0.55),
+    "Indoor Home": (0.25, 0.75),
+    "Indoor Public": (0.30, 0.70),
+    "Outdoor Nature": (0.35, 0.75),
+    "Factory": (0.30, 0.70),
+    "Outdoor Urban": (0.35, 0.75),
+    "Vehicle": (0.40, 0.70),
+    "Other": (0.45, 0.55),
 }
 color_palettes = {
     env: plt.cm.Blues(np.linspace(lo, hi, len(data[env])))
