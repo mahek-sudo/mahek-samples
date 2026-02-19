@@ -44,15 +44,19 @@ data = {
     ],
 }
 
-# Color palettes for each environment (light to dark shades)
+# Color palettes for each environment (different shades of blue)
+blue_ranges = {
+    "indoor_home": (0.25, 0.75),
+    "indoor_public": (0.30, 0.70),
+    "outdoor_nature": (0.35, 0.75),
+    "factory": (0.30, 0.70),
+    "outdoor_urban": (0.35, 0.75),
+    "vehicle": (0.40, 0.70),
+    "other": (0.45, 0.55),
+}
 color_palettes = {
-    "indoor_home": plt.cm.Blues(np.linspace(0.35, 0.85, len(data["indoor_home"]))),
-    "indoor_public": plt.cm.Oranges(np.linspace(0.35, 0.85, len(data["indoor_public"]))),
-    "outdoor_nature": plt.cm.Greens(np.linspace(0.35, 0.85, len(data["outdoor_nature"]))),
-    "factory": plt.cm.Reds(np.linspace(0.35, 0.85, len(data["factory"]))),
-    "outdoor_urban": plt.cm.Purples(np.linspace(0.35, 0.85, len(data["outdoor_urban"]))),
-    "vehicle": plt.cm.YlOrBr(np.linspace(0.35, 0.85, len(data["vehicle"]))),
-    "other": plt.cm.Greys(np.linspace(0.45, 0.65, len(data["other"]))),
+    env: plt.cm.Blues(np.linspace(lo, hi, len(data[env])))
+    for env, (lo, hi) in blue_ranges.items()
 }
 
 fig, ax = plt.subplots(figsize=(14, 8))
