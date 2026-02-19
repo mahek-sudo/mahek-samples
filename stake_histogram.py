@@ -91,7 +91,7 @@ for i, env in enumerate(env_names):
             label,
             ha="center",
             va="center",
-            fontsize=10,
+            fontsize=7.5,
             fontweight="bold",
             color="black",
             clip_on=True,
@@ -117,7 +117,7 @@ ax.set_xticklabels(env_names, fontsize=12, fontweight="bold")
 ax.set_ylabel("")
 ax.set_title("Distribution by Environment", fontsize=18, fontweight="bold", pad=15)
 ax.tick_params(axis="y", labelsize=11)
-ax.yaxis.set_major_formatter(mticker.PercentFormatter())
+ax.yaxis.set_major_formatter(mticker.FuncFormatter(lambda x, _: f"{x:.0f}"))
 ax.set_ylim(0, 45)
 ax.spines["top"].set_visible(False)
 ax.spines["right"].set_visible(False)
