@@ -6,7 +6,7 @@ import numpy as np
 data = {
     "indoor_home": [
         ("Kitchen", 11.2),
-        ("Living room", 10.0),
+        ("Living Room", 10.0),
         ("Bedroom", 8.0),
         ("Garage", 4.8),
         ("Other", 6.0),
@@ -36,7 +36,7 @@ data = {
         ("Other", 1.8),
     ],
     "vehicle": [
-        ("Car cabin", 2.4),
+        ("Car Cabin", 2.4),
         ("Other", 1.3),
     ],
     "other": [
@@ -59,7 +59,7 @@ color_palettes = {
     for env, (lo, hi) in blue_ranges.items()
 }
 
-fig, ax = plt.subplots(figsize=(14, 8))
+fig, ax = plt.subplots(figsize=(12, 8))
 
 bar_width = 0.85
 x_positions = np.arange(len(data))
@@ -91,7 +91,7 @@ for i, env in enumerate(env_names):
             label,
             ha="center",
             va="center",
-            fontsize=9,
+            fontsize=10,
             fontweight="bold",
             color="black",
             clip_on=True,
@@ -107,7 +107,7 @@ for i, env in enumerate(env_names):
         f"{total:.1f}%",
         ha="center",
         va="bottom",
-        fontsize=12,
+        fontsize=13,
         fontweight="bold",
         color="#333333",
     )
