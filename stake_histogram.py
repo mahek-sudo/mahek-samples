@@ -31,9 +31,9 @@ data = {
         ("Other", 2.4),
     ],
     "outdoor_urban": [
-        ("Street infrastructure", 2.9),
+        ("Street infra", 2.9),
         ("Construction site", 2.6),
-        ("Loading dock", 1.8),
+        ("Other", 1.8),
     ],
     "vehicle": [
         ("Car cabin", 2.4),
