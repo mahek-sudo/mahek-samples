@@ -61,7 +61,7 @@ color_palettes = {
 
 fig, ax = plt.subplots(figsize=(14, 8))
 
-bar_width = 0.75
+bar_width = 0.85
 x_positions = np.arange(len(data))
 env_names = list(data.keys())
 
@@ -120,7 +120,6 @@ ax.yaxis.set_major_formatter(mticker.PercentFormatter())
 ax.set_ylim(0, 45)
 ax.spines["top"].set_visible(False)
 ax.spines["right"].set_visible(False)
-ax.grid(axis="y", alpha=0.3, linestyle="--")
 
 plt.tight_layout()
 plt.savefig("/home/user/mahek-samples/stake_histogram.png", dpi=150, bbox_inches="tight")
