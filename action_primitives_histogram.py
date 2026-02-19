@@ -38,10 +38,9 @@ data = {
         ("other", 1.0),
     ],
     "Bimanual": [
-        ("two_hand_hold", 2.5),
-        ("anchor_and_act", 2.0),
-        ("two_hand_align", 1.5),
-        ("other", 0.5),
+        ("two_hand", 3.5),
+        ("one_hand", 2.0),
+        ("other", 1.0),
     ],
     "Deform": [
         ("fold", 1.5),
