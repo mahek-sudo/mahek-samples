@@ -52,14 +52,14 @@ data = {
     ],
 }
 
-# Color palettes for each environment (light to dark shades)
+# Color palettes for each environment (purple-based scheme)
 color_palettes = {
-    "indoor_home": plt.cm.Blues(np.linspace(0.35, 0.85, len(data["indoor_home"]))),
-    "indoor_public": plt.cm.Oranges(np.linspace(0.35, 0.85, len(data["indoor_public"]))),
-    "outdoor_nature": plt.cm.Greens(np.linspace(0.35, 0.85, len(data["outdoor_nature"]))),
-    "factory": plt.cm.Reds(np.linspace(0.35, 0.85, len(data["factory"]))),
-    "outdoor_urban": plt.cm.Purples(np.linspace(0.35, 0.85, len(data["outdoor_urban"]))),
-    "vehicle": plt.cm.YlOrBr(np.linspace(0.35, 0.85, len(data["vehicle"]))),
+    "indoor_home": plt.cm.Purples(np.linspace(0.40, 0.90, len(data["indoor_home"]))),
+    "indoor_public": plt.cm.RdPu(np.linspace(0.35, 0.80, len(data["indoor_public"]))),
+    "outdoor_nature": plt.cm.BuPu(np.linspace(0.35, 0.80, len(data["outdoor_nature"]))),
+    "factory": plt.cm.PuRd(np.linspace(0.30, 0.75, len(data["factory"]))),
+    "outdoor_urban": plt.cm.GnBu(np.linspace(0.40, 0.85, len(data["outdoor_urban"]))),
+    "vehicle": plt.cm.PuBu(np.linspace(0.35, 0.80, len(data["vehicle"]))),
     "other": plt.cm.Greys(np.linspace(0.45, 0.65, len(data["other"]))),
 }
 
