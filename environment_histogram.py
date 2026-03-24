@@ -12,11 +12,11 @@ data = {
         ("Other", 4.0),
     ],
     "Indoor Public": [
-        ("Office", 4.5),
-        ("Retail", 2.5),
+        ("Retail", 4.5),
+        ("Warehouse", 2.5),
+        ("Office", 2.0),
         ("Restaurant", 1.5),
-        ("Warehouse", 1.5),
-        ("Other", 1.5),
+        ("Other", 1.0),
     ],
     "Outdoor Nature": [
         ("Garden", 7.5),
