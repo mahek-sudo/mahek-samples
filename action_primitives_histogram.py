@@ -7,16 +7,16 @@ data = {
     "Contact / Grasp": [
         ("reach", 6.0),
         ("touch", 5.0),
-        ("grasp_power", 8.0),
-        ("grasp_precision", 9.0),
-        ("regrasp", 5.0),
-        ("release", 4.5),
+        ("grasp_power", 9.5),
+        ("grasp_precision", 10.5),
+        ("regrasp", 5.5),
+        ("release", 5.0),
     ],
     "Place / Move": [
-        ("lift", 7.0),
-        ("place", 8.0),
-        ("move", 6.0),
-        ("slide", 4.0),
+        ("lift", 8.0),
+        ("place", 9.5),
+        ("move", 7.0),
+        ("slide", 4.5),
     ],
     "Tool Use": [
         ("use_tool", 4.5),
@@ -130,7 +130,7 @@ ax.set_title(
 )
 ax.tick_params(axis="y", labelsize=10.5)
 ax.yaxis.set_major_formatter(mticker.PercentFormatter())
-ax.set_ylim(0, 42)
+ax.set_ylim(0, 47)
 ax.spines["top"].set_visible(False)
 ax.spines["right"].set_visible(False)
 
