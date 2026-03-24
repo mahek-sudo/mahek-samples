@@ -5,28 +5,43 @@ import numpy as np
 # Data organized by environment
 data = {
     "Indoor Home": [
-        ("Kitchen Dining", 12),
-        ("Living Bedroom", 11),
-        ("Bathroom Utility", 7),
-        ("Entry Hallway", 7),
+        ("Kitchen", 13.0),
+        ("Living Room", 9.0),
+        ("Bedroom", 6.5),
+        ("Garage", 3.5),
+        ("Other", 4.0),
     ],
     "Indoor Public": [
-        ("Retail Stores", 7),
-        ("Offices Workspaces", 3),
-        ("Gyms Facilities", 3),
-        ("Transit Interiors", 4),
+        ("Office", 4.5),
+        ("Retail", 2.5),
+        ("Restaurant", 1.5),
+        ("Warehouse", 1.5),
+        ("Other", 1.5),
     ],
     "Outdoor Nature": [
-        ("Forest Trails", 6),
-        ("Parks Fields", 7),
-        ("Water Shores", 4),
-        ("Mountain Desert", 3),
+        ("Garden", 7.5),
+        ("Trail", 5.0),
+        ("Farm", 2.5),
+        ("Other", 3.0),
     ],
     "Outdoor Urban": [
-        ("Streets Sidewalks", 7),
-        ("Markets Plazas", 4),
-        ("Transit Areas", 4),
-        ("Storefronts Alleys", 5),
+        ("Neighborhood", 4.0),
+        ("Street Infra", 3.5),
+        ("Construction", 1.5),
+        ("Other", 1.5),
+    ],
+    "Factory": [
+        ("Assembly Line", 2.5),
+        ("Packaging", 1.5),
+        ("Machine Shop", 1.3),
+        ("Other", 1.2),
+    ],
+    "Vehicle": [
+        ("Car Cabin", 1.2),
+        ("Other", 0.8),
+    ],
+    "Other": [
+        ("Other", 2.0),
     ],
 }
 
@@ -36,13 +51,16 @@ blue_ranges = {
     "Indoor Public": (0.30, 0.70),
     "Outdoor Nature": (0.35, 0.75),
     "Outdoor Urban": (0.30, 0.70),
+    "Factory": (0.30, 0.70),
+    "Vehicle": (0.35, 0.70),
+    "Other": (0.40, 0.65),
 }
 color_palettes = {
     env: plt.cm.Blues(np.linspace(lo, hi, len(data[env])))
     for env, (lo, hi) in blue_ranges.items()
 }
 
-fig, ax = plt.subplots(figsize=(14, 8))
+fig, ax = plt.subplots(figsize=(18, 8))
 
 bar_width = 0.85
 x_positions = np.arange(len(data))
@@ -87,7 +105,7 @@ for i, env in enumerate(env_names):
     ax.text(
         x_positions[i],
         bottom + 0.5,
-        f"{total}%",
+        f"{total:.1f}%",
         ha="center",
         va="bottom",
         fontsize=11.5,
@@ -101,7 +119,7 @@ ax.set_ylabel("")
 ax.set_title("Distribution of Environment Types", fontsize=17.5, fontweight="bold", pad=15)
 ax.tick_params(axis="y", labelsize=10.5)
 ax.yaxis.set_major_formatter(mticker.PercentFormatter())
-ax.set_ylim(0, 45)
+ax.set_ylim(0, 42)
 ax.spines["top"].set_visible(False)
 ax.spines["right"].set_visible(False)
 
