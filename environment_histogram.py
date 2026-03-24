@@ -11,18 +11,18 @@ data = {
         ("Garage", 4.0),
         ("Other", 5.0),
     ],
+    "Outdoor Nature": [
+        ("Garden", 8.5),
+        ("Trail", 6.0),
+        ("Farm", 3.0),
+        ("Other", 3.5),
+    ],
     "Indoor Public": [
         ("Retail", 5.0),
         ("Warehouse", 3.0),
         ("Office", 2.5),
         ("Restaurant", 2.0),
         ("Other", 1.5),
-    ],
-    "Outdoor Nature": [
-        ("Garden", 8.5),
-        ("Trail", 6.0),
-        ("Farm", 3.0),
-        ("Other", 3.5),
     ],
     "Outdoor Urban": [
         ("Neighborhood", 5.0),
@@ -48,8 +48,8 @@ data = {
 # Color palettes for each environment (different shades of blue)
 blue_ranges = {
     "Indoor Home": (0.25, 0.75),
-    "Indoor Public": (0.30, 0.70),
     "Outdoor Nature": (0.35, 0.75),
+    "Indoor Public": (0.30, 0.70),
     "Outdoor Urban": (0.30, 0.70),
     "Factory": (0.30, 0.70),
     "Vehicle": (0.35, 0.70),
