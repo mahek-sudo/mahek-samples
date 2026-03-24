@@ -62,7 +62,7 @@ blue_ranges = {
     "Other /\nUncategorized": (0.40, 0.65),
 }
 color_palettes = {
-    cat: plt.cm.Blues(np.linspace(lo, hi, len(data[cat])))
+    cat: plt.cm.Purples(np.linspace(lo, hi, len(data[cat])))
     for cat, (lo, hi) in blue_ranges.items()
 }
 
