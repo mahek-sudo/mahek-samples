@@ -5,18 +5,18 @@ import numpy as np
 # Data organized by category
 data = {
     "Contact / Grasp": [
-        ("grasp_precision", 8.0),
-        ("grasp_power", 6.5),
-        ("reach", 5.0),
-        ("regrasp", 4.0),
-        ("touch", 4.0),
-        ("release", 3.5),
+        ("reach", 6.0),
+        ("touch", 5.0),
+        ("grasp_power", 8.0),
+        ("grasp_precision", 9.0),
+        ("regrasp", 5.0),
+        ("release", 4.5),
     ],
     "Place / Move": [
-        ("place", 7.5),
-        ("lift", 6.0),
-        ("move", 5.0),
-        ("slide", 3.5),
+        ("lift", 7.0),
+        ("place", 8.0),
+        ("move", 6.0),
+        ("slide", 4.0),
     ],
     "Tool Use": [
         ("use_tool", 4.5),
@@ -130,7 +130,7 @@ ax.set_title(
 )
 ax.tick_params(axis="y", labelsize=10.5)
 ax.yaxis.set_major_formatter(mticker.PercentFormatter())
-ax.set_ylim(0, 38)
+ax.set_ylim(0, 42)
 ax.spines["top"].set_visible(False)
 ax.spines["right"].set_visible(False)
 
