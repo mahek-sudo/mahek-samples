@@ -5,48 +5,49 @@ import numpy as np
 # Data organized by category
 data = {
     "Contact / Grasp": [
-        ("grasp_power", 7.0),
-        ("grasp_precision", 6.0),
-        ("reach", 5.5),
+        ("grasp_precision", 8.0),
+        ("grasp_power", 6.5),
+        ("reach", 5.0),
+        ("regrasp", 4.0),
+        ("touch", 4.0),
         ("release", 3.5),
-        ("other", 8.0),
     ],
     "Place / Move": [
-        ("lift", 6.5),
-        ("place", 6.0),
-        ("move", 5.5),
-        ("other", 4.0),
+        ("place", 7.5),
+        ("lift", 6.0),
+        ("move", 5.0),
+        ("slide", 3.5),
     ],
     "Tool Use": [
-        ("press", 3.5),
-        ("rotate", 3.0),
+        ("use_tool", 4.5),
         ("cut", 3.0),
-        ("push", 2.5),
-        ("other", 6.0),
+        ("rotate", 2.5),
+        ("press", 2.5),
+        ("scrape", 2.0),
+        ("pull", 2.0),
+        ("push", 2.0),
     ],
     "Assembly": [
-        ("insert", 3.0),
-        ("align", 3.0),
-        ("remove", 2.5),
-        ("tighten", 2.0),
-        ("other", 1.5),
-    ],
-    "Fluid": [
-        ("pour", 2.5),
-        ("scoop", 2.0),
-        ("dump", 1.5),
-        ("other", 1.0),
-    ],
-    "Bimanual": [
-        ("two_hand", 3.5),
-        ("one_hand", 2.0),
-        ("other", 1.0),
+        ("align", 2.5),
+        ("insert", 2.5),
+        ("remove", 2.0),
+        ("tighten", 1.5),
+        ("loosen", 1.0),
     ],
     "Deform": [
-        ("fold", 1.5),
+        ("fold", 2.5),
+        ("deform", 1.5),
+        ("stretch", 1.5),
         ("compress", 1.5),
-        ("stretch", 1.0),
-        ("other", 1.0),
+    ],
+    "Fluid / Granular": [
+        ("pour", 2.0),
+        ("scoop", 2.0),
+        ("dump", 1.5),
+        ("spread", 1.5),
+    ],
+    "Other /\nUncategorized": [
+        ("—", 5.0),
     ],
 }
 
@@ -56,9 +57,9 @@ blue_ranges = {
     "Place / Move": (0.30, 0.70),
     "Tool Use": (0.25, 0.75),
     "Assembly": (0.25, 0.75),
-    "Fluid": (0.30, 0.70),
-    "Bimanual": (0.35, 0.75),
     "Deform": (0.30, 0.70),
+    "Fluid / Granular": (0.30, 0.70),
+    "Other /\nUncategorized": (0.40, 0.65),
 }
 color_palettes = {
     cat: plt.cm.Blues(np.linspace(lo, hi, len(data[cat])))
@@ -129,7 +130,7 @@ ax.set_title(
 )
 ax.tick_params(axis="y", labelsize=10.5)
 ax.yaxis.set_major_formatter(mticker.PercentFormatter())
-ax.set_ylim(0, 35)
+ax.set_ylim(0, 38)
 ax.spines["top"].set_visible(False)
 ax.spines["right"].set_visible(False)
 
