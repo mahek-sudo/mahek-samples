@@ -5,40 +5,40 @@ import numpy as np
 # Data organized by environment
 data = {
     "Indoor Home": [
-        ("Kitchen", 13.0),
-        ("Living Room", 9.0),
-        ("Bedroom", 6.5),
-        ("Garage", 3.5),
-        ("Other", 4.0),
+        ("Kitchen", 14.0),
+        ("Living Room", 10.0),
+        ("Bedroom", 7.5),
+        ("Garage", 4.0),
+        ("Other", 5.0),
     ],
     "Indoor Public": [
-        ("Retail", 4.5),
-        ("Warehouse", 2.5),
-        ("Office", 2.0),
-        ("Restaurant", 1.5),
-        ("Other", 1.0),
-    ],
-    "Outdoor Nature": [
-        ("Garden", 7.5),
-        ("Trail", 5.0),
-        ("Farm", 2.5),
-        ("Other", 3.0),
-    ],
-    "Outdoor Urban": [
-        ("Neighborhood", 4.0),
-        ("Street Infra", 3.5),
-        ("Construction", 1.5),
+        ("Retail", 5.0),
+        ("Warehouse", 3.0),
+        ("Office", 2.5),
+        ("Restaurant", 2.0),
         ("Other", 1.5),
     ],
+    "Outdoor Nature": [
+        ("Garden", 8.5),
+        ("Trail", 6.0),
+        ("Farm", 3.0),
+        ("Other", 3.5),
+    ],
+    "Outdoor Urban": [
+        ("Neighborhood", 5.0),
+        ("Street Infra", 4.0),
+        ("Construction", 2.0),
+        ("Other", 2.0),
+    ],
     "Factory": [
-        ("Assembly Line", 2.5),
+        ("Assembly Line", 2.0),
         ("Packaging", 1.5),
-        ("Machine Shop", 1.3),
-        ("Other", 1.2),
+        ("Machine Shop", 1.5),
+        ("Other", 1.5),
     ],
     "Vehicle": [
-        ("Car Cabin", 1.2),
-        ("Other", 0.8),
+        ("Car Cabin", 2.0),
+        ("Other", 1.0),
     ],
     "Other": [
         ("Other", 2.0),
@@ -119,7 +119,7 @@ ax.set_ylabel("")
 ax.set_title("Distribution of Environment Types", fontsize=17.5, fontweight="bold", pad=15)
 ax.tick_params(axis="y", labelsize=10.5)
 ax.yaxis.set_major_formatter(mticker.PercentFormatter())
-ax.set_ylim(0, 42)
+ax.set_ylim(0, 45)
 ax.spines["top"].set_visible(False)
 ax.spines["right"].set_visible(False)
 
